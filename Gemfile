@@ -33,14 +33,19 @@ gem 'unicorn'
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'capybara'
+end
+
+group :development, :test do
+  gem 'pry'
+  gem 'rspec-rails'
+  gem 'rspec-expectations'
+  gem 'rspec-mocks'
+  gem 'factory_girl_rails'
 end
 
 group :development do
   gem 'better_errors'
-  gem 'capistrano-rails', group: :development
-  gem 'pry'
-  gem 'rspec-rails'
-  gem 'rspec'
-  gem 'rspec-expectations'
-  gem 'spring',        group: :development
+  gem 'capistrano-rails'
+  gem 'spring'
 end
