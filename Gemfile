@@ -20,7 +20,7 @@ gem 'devise'
 gem 'middleware'
 gem 'thin'
 gem 'em-websocket'
-gem 'em-hiredis'
+gem 'redis'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -31,8 +31,8 @@ gem 'unicorn'
 # Use Capistrano for deployment
 
 group :test do
-  gem 'database_cleaner'
   gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :development do
